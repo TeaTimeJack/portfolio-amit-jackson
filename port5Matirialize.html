@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amit Jackson - Professional Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    
+    <style>
+        /* Apply Inter font and clean background */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f7fafc; /* Very light, relaxing background */
+            color: #424242; /* Darker gray text */
+        }
+        /* Override Materialize link color to Teal */
+        nav a {
+            color: #00897b !important; /* Teal accent color for links */
+        }
+        /* Custom card styling for projects */
+        .project-card {
+            border-left: 5px solid #009688; /* Teal border for accent */
+            transition: box-shadow 0.3s ease;
+        }
+        .project-card:hover {
+            box-shadow: 0 8px 17px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+        }
+        .teal-text-accent {
+            color: #009688 !important; /* Materialize Teal */
+        }
+        .teal-background {
+            background-color: #00897b !important; /* Darker Teal for primary actions */
+        }
+        /* Profile image specific styling */
+        .profile-img-container {
+            width: 256px;
+            height: 256px;
+            border-radius: 50%;
+            overflow: hidden;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            border: 4px solid #4db6ac; /* Light Teal border */
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body class="grey lighten-5">
+
+    <header>
+        <div class="navbar-fixed">
+            <nav class="white z-depth-1">
+                <div class="nav-wrapper container">
+                    <a href="#" class="brand-logo teal-text-accent text-darken-2" style="font-weight: 700;">Amit Jackson</a>
+                    <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons black-text">menu</i></a>
+                    <ul class="right hide-on-med-and-down">
+                        <li><a href="#about" class="grey-text text-darken-3">About</a></li>
+                        <li><a href="#projects" class="grey-text text-darken-3">Projects</a></li>
+                        <li><a href="#contact" class="grey-text text-darken-3">Contact</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+        <ul class="sidenav" id="mobile-demo">
+            <li><a href="#about" class="grey-text text-darken-3">About</a></li>
+            <li><a href="#projects" class="grey-text text-darken-3">Projects</a></li>
+            <li><a href="#contact" class="grey-text text-darken-3">Contact</a></li>
+        </ul>
+    </header>
+
+    <main>
+        <section id="hero" class="section center-align grey lighten-4" style="padding: 100px 0;">
+            <div class="container">
+                <h1 class="flow-text grey-text text-darken-4" style="font-size: 4rem; font-weight: 800; line-height: 1.2;">
+                    Building <span class="teal-text text-darken-2">Bridges</span> For Solutions
+                </h1>
+                <h5 class="light grey-text text-darken-1 hide-on-small-only" style="margin-top: 20px;">
+                    Full-Stack Developer | Focused on leadership, problem-solving, and clean, scalable code.
+                </h5>
+                <a href="#projects" class="btn-large waves-effect waves-light teal-background z-depth-2" style="margin-top: 30px; border-radius: 50px;">
+                    View My Work <i class="material-icons right">code</i>
+                </a>
+            </div>
+        </section>
+
+        <section id="about" class="section scrollspy white">
+            <div class="container">
+                <h2 class="center-align" style="font-weight: 700; margin-bottom: 50px;">About Me</h2>
+                <div class="row">
+                    <div class="col s12 m6">
+                        <div class="profile-img-container">
+                            <img src="https://placehold.co/400x400/26a69a/ffffff?text=A+J" alt="Amit Jackson Professional Portrait" class="responsive-img">
+                        </div>
+                    </div>
+                    <div class="col s12 m6">
+                        <p class="flow-text light grey-text text-darken-2">
+                            I am a dedicated Fullstack Developer specializing in creating dynamic, scalable web applications using <span class="light black-text text-darken-3">TypeScript, React, and Node.js</span>. My core focus is on transforming complex business problems into elegant, efficient, and reliable code.
+                        </p>
+                        <p class="light teal-text text-darken-2" style="font-weight: 600;">
+                            My unconventional background—including 5 years as a Crane Operator, IDF Commander, and Youth Coordinator—has forged a powerful set of complementary skills:
+                        </p>
+                        <ul class="browser-default" style="margin-left: 20px;">
+                            <li class="grey-text text-darken-3"><span class="teal-text text-darken-1">Precision and Detail:</span> A deep understanding of the need for absolute accuracy in high-stakes operations.</li>
+                            <li class="grey-text text-darken-3"><span class="teal-text text-darken-1">Strategic Planning:</span> The ability to look ahead, anticipate technical challenges, and map out a robust path forward.</li>
+                            <li class="grey-text text-darken-3"><span class="teal-text text-darken-1">Leadership and Coordination:</span> Proven capacity to lead diverse teams and ensure complex projects meet deadlines safely and successfully.</li>
+                        </ul>
+                        
+                        <h6 style="margin-top: 20px; font-weight: 500;">Tech Stack:</h6>
+                        <div class="chips-container">
+                            <div class="chip teal lighten-5 teal-text text-darken-2">TypeScript & JavaScript</div>
+                            <div class="chip teal lighten-5 teal-text text-darken-2">React & Redux</div>
+                            <div class="chip teal lighten-5 teal-text text-darken-2">Node.js & Express.js</div>
+                            <div class="chip teal lighten-5 teal-text text-darken-2">Python & OOP</div>
+                            <div class="chip teal lighten-5 teal-text text-darken-2">MongoDB & SQL</div>
+                            <div class="chip teal lighten-5 teal-text text-darken-2">REST APIs & Axios</div>
+                            <div class="chip teal lighten-5 teal-text text-darken-2">Git/GitHub</div>
+                            <div class="chip teal lighten-5 teal-text text-darken-2">Postman</div>
+                            <div class="chip teal lighten-5 teal-text text-darken-2">Bootstrap & Materialize</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" class="section scrollspy grey lighten-4">
+            <div class="container">
+                <h2 class="center-align" style="font-weight: 700; margin-bottom: 50px;">Featured Projects</h2>
+
+                <div class="row project-card z-depth-1 white" style="margin-bottom: 40px;">
+                    <div class="col s12 m6">
+                        <img src="https://placehold.co/800x500/26a69a/ffffff?text=Crane+App+Interface" alt="Crane Operator App Interface" class="responsive-img" style="border-radius: 4px;">
+                    </div>
+                    <div class="col s12 m6" style="padding: 20px;">
+                        <h3 class="teal-text text-darken-2" style="font-weight: 600;">Crane Operators App</h3>
+                        <p class="grey-text text-darken-1">
+                            An ultimate solution with many features that every crane operator needs. An organized, user friendly, interactive and social App.
+                        </p>
+                        <ul class="browser-default" style="margin-left: 20px; font-size: 0.9rem;">
+                            <li>Created a server with 3 tables and many End Points.</li>
+                            <li>Implemented **JWT** for User Logins and Functionalities.</li>
+                            <li>Used **Redux** for state management of Users and Posts.</li>
+                        </ul>
+                        <p class="grey-text text-lighten-1" style="margin-top: 15px;">
+                             Tech Stack: Node.js, React, Redux, TypeScript
+                        </p>
+                        <div class="mt-4" style="margin-top: 20px;">
+                            <a href="https://crane-app.netlify.app/" target="_blank" class="btn waves-effect waves-light teal-background" style="margin-right: 10px;">
+                                <i class="material-icons left">visibility</i> View Demo
+                            </a>
+                            <a href="https://gamma.app/docs/Final-project-Demo-Daypptx-dnz8rk3mxzjz0az" target="_blank" class="btn waves-effect waves-light teal lighten-4 teal-text text-darken-4" style="margin-right: 10px;">
+                                Presentation
+                            </a>
+                            <a href="https://github.com/TeaTimeJack/Crane-User-App" target="_blank" class="btn waves-effect waves-light grey darken-2">
+                                GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row project-card z-depth-1 white">
+                    <div class="col s12 m6 push-m6">
+                        <img src="https://placehold.co/800x500/424242/ffffff?text=Random+Pokemon+Battle" alt="Pokemon Game Screenshot" class="responsive-img" style="border-radius: 4px;">
+                    </div>
+                    <div class="col s12 m6 pull-m6" style="padding: 20px;">
+                        <h3 class="teal-text text-darken-2" style="font-weight: 600;">Random Pokemon Battle</h3>
+                        <p class="grey-text text-darken-1">
+                            An interactive game built with **TypeScript**. Users can throw Pokeballs to catch a Pokémon and battle against a random CPU opponent.
+                        </p>
+                        <ul class="browser-default" style="margin-left: 20px; font-size: 0.9rem;">
+                            <li>Fetched and manipulated **API data** to dynamically update and render UI elements.</li>
+                            <li>Implemented time-based logic with `setTimeout`, enhancing game flow and user experience.</li>
+                        </ul>
+                        <p class="grey-text text-lighten-1" style="margin-top: 15px;">
+                            Tech Stack: TypeScript, JavaScript, API Integration, React
+                        </p>
+                        <div class="mt-4" style="margin-top: 20px;">
+                            <a href="https://random-pokemon-battle.netlify.app/" target="_blank" class="btn waves-effect waves-light teal-background" style="margin-right: 10px;">
+                                <i class="material-icons left">gamepad</i> View Demo
+                            </a>
+                            <a href="https://github.com/TeaTimeJack/Random_pokemon_battle" target="_blank" class="btn waves-effect waves-light grey darken-2">
+                                GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </section>
+
+        <section id="contact" class="section scrollspy white center-align">
+            <div class="container">
+                <h2 style="font-weight: 700; margin-bottom: 20px;">Let's Connect</h2>
+                <p class="flow-text light grey-text text-darken-1" style="margin-bottom: 40px;">
+                    I am currently open to exciting new opportunities. Feel free to reach out to discuss collaboration or just say hi!
+                </p>
+
+                <div class="row">
+                    <div class="col s12 m4" style="margin-bottom: 15px;">
+                        <a href="mailto:amitjack14@gmail.com?subject=Inquiry%20from%20Your%20Portfolio" class="btn-large waves-effect waves-light teal-background z-depth-1" style="width: 100%;">
+                            <i class="material-icons left">email</i> Email Me
+                        </a>
+                    </div>
+                    <div class="col s12 m4" style="margin-bottom: 15px;">
+                        <a href="http://www.linkedin.com/in/amit-jackson" target="_blank" class="btn-large waves-effect waves-light grey darken-2 z-depth-1" style="width: 100%;">
+                            <i class="material-icons left">public</i> LinkedIn
+                        </a>
+                    </div>
+                    <div class="col s12 m4" style="margin-bottom: 15px;">
+                        <a href="https://github.com/TeaTimeJack" target="_blank" class="btn-large waves-effect waves-light black z-depth-1" style="width: 100%;">
+                            <i class="material-icons left">code</i> GitHub
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="page-footer grey darken-3">
+        <div class="container">
+            <div class="row">
+                <div class="col s12">
+                    <p class="grey-text text-lighten-4 center-align">
+                        &copy; <span id="year"></span> Amit Jackson. Designed with Materialize CSS.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script>
+        // Initialize Materialize components
+        document.addEventListener('DOMContentLoaded', function() {
+            // Sidenav initialization for mobile
+            var elemsSidenav = document.querySelectorAll('.sidenav');
+            M.Sidenav.init(elemsSidenav);
+            
+            // Scrollspy initialization
+            var elemsScrollspy = document.querySelectorAll('.scrollspy');
+            M.ScrollSpy.init(elemsScrollspy);
+            
+            // Update the current year in the footer
+            document.getElementById('year').textContent = new Date().getFullYear();
+        });
+    </script>
+</body>
+</html>
