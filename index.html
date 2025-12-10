@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -344,6 +344,548 @@
             
             // Update the current year in the footer
             document.getElementById('year').textContent = new Date().getFullYear();
+        });
+    </script>
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-en="Amit Jackson - Professional Portfolio" data-he="עמית ג'קסון - פורטפוליו מקצועי">Amit Jackson - Professional Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    
+    <style>
+        /* Apply Inter font and clean background */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f7fafc; /* Very light, relaxing background */
+            color: #424242; /* Darker gray text */
+        }
+        /* Override Materialize link color to Teal */
+        nav a {
+            color: #00897b !important; /* Teal accent color for links */
+        }
+        /* Custom card styling for projects */
+        .project-card {
+            border-left: 5px solid #009688; /* Teal border for accent (LTR default) */
+            transition: box-shadow 0.3s ease;
+        }
+        .project-card:hover {
+            box-shadow: 0 8px 17px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+        }
+        .teal-text-accent {
+            color: #009688 !important; /* Materialize Teal */
+        }
+        .teal-background {
+            background-color: #00897b !important; /* Darker Teal for primary actions */
+        }
+        /* Profile image specific styling */
+        .profile-img-container {
+            width: 256px;
+            height: 256px;
+            border-radius: 50%;
+            overflow: hidden;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            border: 4px solid #4db6ac; /* Light Teal border */
+            margin: 0 auto;
+        }
+
+        /* RTL styling for Hebrew */
+        body[data-lang="he"] {
+            direction: rtl;
+            text-align: right;
+        }
+
+        /* Specific adjustments for RTL layout */
+        body[data-lang="he"] .nav-wrapper .right {
+            /* Keep the language switch on the right side of the nav bar */
+            float: left !important;
+            margin-right: 20px;
+        }
+        
+        body[data-lang="he"] .nav-wrapper .right:not(:first-child) {
+            float: right !important; /* Push menu links to the right */
+        }
+
+        body[data-lang="he"] .brand-logo {
+            float: right; /* Brand logo to the right in RTL */
+        }
+
+        body[data-lang="he"] .project-card {
+            border-left: none; 
+            border-right: 5px solid #009688; /* Teal border for accent on the right */
+        }
+
+        /* Fix for Materialize grid push/pull in RTL (reversing the order) */
+        body[data-lang="he"] .m6.push-m6 {
+            right: 50%;
+            left: auto;
+        }
+        body[data-lang="he"] .m6.pull-m6 {
+            left: 50%;
+            right: auto;
+        }
+    </style>
+</head>
+<body class="grey lighten-5">
+
+    <header>
+        <div class="navbar-fixed">
+            <nav class="white z-depth-1">
+                <div class="nav-wrapper container">
+                    <a href="#" data-en="Amit Jackson" data-he="עמית ג'קסון" class="brand-logo teal-text-accent text-darken-2 hide-on-small-only" style="font-weight: 700;">Amit Jackson</a>
+                    <a href="#" data-en="Amit Jackson" data-he="עמית ג'קסון" class="teal-text-accent text-darken-2 hide-on-med-and-up" style="font-weight: 700; font-size: x-large;">Amit Jackson</a>
+                    <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons black-text">menu</i></a>
+                    
+                    <div class="right" style="padding-top: 15px; display: flex; align-items: center;">
+                        <span class="left lang-label-en teal-text text-darken-2" style="font-weight: 600; margin-right: 5px;">EN</span>
+                        <div class="switch">
+                            <label style="line-height: 22px;">
+                                <input type="checkbox" id="language-toggle">
+                                <span class="lever"></span>
+                            </label>
+                        </div>
+                        <span class="right lang-label-he grey-text text-darken-3" style="font-weight: 600; margin-left: 5px;">HE</span>
+                    </div>
+
+                    <ul class="right hide-on-med-and-down">
+                        <li><a href="#about" data-en="About" data-he="אודות" class="grey-text text-darken-3">About</a></li>
+                        <li><a href="#projects" data-en="Projects" data-he="פרויקטים" class="grey-text text-darken-3">Projects</a></li>
+                        <li><a href="#contact" data-en="Contact" data-he="יצירת קשר" class="grey-text text-darken-3">Contact</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+        <ul class="sidenav" id="mobile-demo">
+            <li><a href="#about" data-en="About" data-he="אודות" class="grey-text text-darken-3">About</a></li>
+            <li><a href="#projects" data-en="Projects" data-he="פרויקטים" class="grey-text text-darken-3">Projects</a></li>
+            <li><a href="#contact" data-en="Contact" data-he="יצירת קשר" class="grey-text text-darken-3">Contact</a></li>
+        </ul>
+    </header>
+
+    <main>
+        <section id="hero" class="section center-align grey lighten-4" style="padding: 100px 0;">
+            <div class="container">
+                <h1 class="flow-text grey-text text-darken-4" style="font-size: 4rem; font-weight: 800; line-height: 1.2;"
+                    data-en='Building <span class="teal-text text-darken-2">Bridges</span> For Solutions'
+                    data-he='<span class="teal-text text-darken-2">בונה פתרונות </span> מגשרים'>
+                    Building <span class="teal-text text-darken-2">Bridges</span> For Solutions
+                </h1>
+                <img src="https://res.cloudinary.com/dnfebz6gp/image/upload/v1764878277/cover-bridge_qbyx70.jpg" alt="Crane Operator App Interface" class="responsive-img" style="border:#424242 solid; border-radius: 4px; margin-top: 5px;">
+            
+                <h5 class="light grey-text text-darken-1 hide-on-small-only" style="margin-top: 20px;"
+                    data-en="Full-Stack Developer | Focused on leadership, problem-solving, and clean, scalable code."
+                    data-he="מפתח Full-Stack | מתמקד במנהיגות, פתרון בעיות וקוד נקי וסקיילבילי.">
+                    Full-Stack Developer | Focused on leadership, problem-solving, and clean, scalable code.
+                </h5>
+                
+                <div class="row">
+                    <div class="col s12 m3" style="margin-bottom: 15px;">
+                        <a href="https://docs.google.com/document/d/1WiCdoKMrXVtSCaXMAJrWfK1hsETa05fog90rb1Gp_uA/edit?usp=sharing" target="_blank" class="btn-large waves-effect waves-light cyan darken-3 z-depth-1" style="width: 100%;"
+                            data-en="Resume" data-he="קורות חיים">
+                            <i class="material-icons left">link</i> Resume
+                        </a>
+                    </div>
+                    <div class="col s12 m3" style="margin-bottom: 15px;">
+                        <a href="mailto:amitjack14@gmail.com?subject=Inquiry%20from%20Your%20Portfolio" class="btn-large waves-effect waves-light teal-background z-depth-1" style="width: 100%;"
+                            data-en="Email Me" data-he="שלח לי מייל">
+                            <i class="material-icons left">email</i> Email Me
+                        </a>
+                    </div>
+                    <div class="col s12 m3" style="margin-bottom: 15px;">
+                        <a href="http://www.linkedin.com/in/amit-jackson" target="_blank" class="btn-large waves-effect waves-light grey darken-2 z-depth-1" style="width: 100%;"
+                            data-en="LinkedIn" data-he="לינקדאין">
+                            <i class="material-icons left">public</i> LinkedIn
+                        </a>
+                    </div>
+                    <div class="col s12 m3" style="margin-bottom: 15px;">
+                        <a href="https://github.com/TeaTimeJack" target="_blank" class="btn-large waves-effect waves-light black z-depth-1" style="width: 100%;"
+                            data-en="GitHub" data-he="גיט">
+                            <i class="material-icons left">code</i> GitHub
+                        </a>
+                    </div>
+                </div>
+                <a href="#projects" class="btn-large waves-effect waves-light teal-background z-depth-2" style="margin-top: 30px; border-radius: 50px;"
+                    data-en="View My Work" data-he="צפה בעבודות שלי">
+                    View My Work <i class="material-icons right">code</i>
+                </a>
+            </div>
+        </section>
+
+        <section id="about" class="section scrollspy white">
+            <div class="container">
+                <h2 class="center-align" style="font-weight: 700;" data-en="About Me" data-he="אודותיי">About Me</h2>
+                <h3 class="center-align" style="font-weight: 700; margin-bottom: 50px;" data-en="Amit Jackson" data-he="עמית ג'קסון">Amit Jackson</h3>
+                <div class="row">
+                    <div class="col s12 m6">
+                        <div class="profile-img-container">
+                            <img src="https://res.cloudinary.com/dnfebz6gp/image/upload/v1764878287/face_white_tcaaeo.png" alt="Amit Jackson Professional Portrait" class="responsive-img">
+                        </div>
+                    </div>
+                    <div class="col s12 m6">
+                        <p class="flow-text light grey-text text-darken-2" 
+                            data-en="Fullstack Developer specializing in creating dynamic, scalable web applications using TypeScript, React, and Node.js. My core focus is on transforming complex business problems into elegant, efficient, and reliable code."
+                            data-he="מפתח פולסטאק המתמחה ביצירת יישומי אינטרנט דינמיים ויציבים באמצעות TypeScript, React ו-Node.js. המיקוד העיקרי שלי הוא בהפיכת בעיות עסקיות מורכבות לקוד אלגנטי, יעיל ואמין.">
+                                Fullstack Developer specializing in creating dynamic, scalable web applications using TypeScript, React, and Node.js. My core focus is on transforming complex business problems into elegant, efficient, and reliable code.  
+                        </p>
+                        <p class="light cyan-text text-darken-4" style="font-weight: 600;"
+                            data-en="<u>My Journey:</u> For the past 5 years, I worked as a Crane Operator on construction sites. This role required me to operate heavy machinery, moving substantial cargo with absolute accuracy while maintaining the highest safety standards for everyone involved. The job demanded constant adaptation, as I moved between sites and worked with ever-changing teams, forging 2 critical skills: Uncompromising precision and the ability to Communicate clearly and lead diverse teams."
+                            data-he="<u>המסע שלי:</u> ב-5 השנים האחרונות עבדתי כמפעיל עגורן באתרי בנייה. תפקיד זה חייב אותי להפעיל ציוד כבד, להזיז מטענים משמעותיים בדיוק מוחלט תוך שמירה על רמות הבטיחות הגבוהות ביותר עבור כל המעורבים. העבודה דרשה הסתגלות מתמדת, הייתי עובר בין אתרים ומחליף צוותים, מה שחישל בי 2 כישורים קריטיים: דיוק בלתי מתפשר והיכולת לתקשר בבירור ולהנהיג צוותים מגוונים.">
+                            <u>My Journey:</u> For the past 5 years, I worked as a Crane Operator on construction sites. This role required me to operate heavy machinery, moving substantial cargo with absolute accuracy while maintaining the highest safety standards for everyone involved. The job demanded constant adaptation, as I moved between sites and worked with ever-changing teams, forging 2 critical skills: Uncompromising precision and the ability to Communicate clearly and lead diverse teams.
+                        </p>
+                        <p class="light cyan-text text-darken-3" style="font-weight: 600;"
+                            data-en="<u>The Transition to Tech:</u> Following my reserve duty after October 7th, I made the decisive choice to start a major career change. I realized I needed a role that would allow me to leverage my full potential for continuous self development."
+                            data-he="<u>המעבר לטכנולוגיה:</u> לאחר הסבב המילואים הראשון שלי מה-7 באוקטובר, קיבלתי את ההחלטה הנחושה להתחיל בשינוי קריירה משמעותי. הבנתי שאני צריך תפקיד שיאפשר לי למנף את מלוא הפוטנציאל שלי לפיתוח עצמי מתמיד.">
+                            <u>The Transition to Tech:</u>
+                            Following my reserve duty after October 7th, I made the decisive choice to start a major career change. 
+                            I realized I needed a role that would allow me to leverage my full potential for continuous self development.
+                        </p>
+                        <p class="light cyan-text text-darken-2" style="font-weight: 600;"
+                            data-en="<u>For a Full Year</u>, after completing my long shifts as a crane operator, I committed to self-study, learning technology independently until 12 or 1 AM. Recognizing this passion needed a professional outlet, I resigned from my previous job and enrolled in the intensive 4 month coding bootcamp at &quot;Developer Institute,&quot; with the goal of becoming a professional programmer. I am immensely proud of this step and fully focused on applying my new technical expertise."
+                            data-he="<u>במשך שנה שלמה</u>, לאחר שסיימתי את המשמרות הארוכות שלי כמפעיל עגורן, התמסרתי ללימוד עצמי, למדתי תכנות באופן עצמאי עד 12 או 1 בלילה. כשהבנתי שהתשוקה הזו צריכה מוצא מקצועי, התפטרתי מעבודתי כמנופאי ונרשמתי לבוטקאמפ הקידוד האינטנסיבי של 4 חודשים ב-&quot;Developer Institute&quot;, במטרה להפוך למתכנת מקצועי. אני גאה מאוד בצעד זה וממוקד לחלוטין ביישום המומחיות הטכנית החדשה שלי.">
+                            <u>For a Full Year</u>, after completing my long shifts as a crane operator, I committed to self-study, learning technology independently until 12 or 1 AM. 
+                            Recognizing this passion needed a professional outlet, I resigned from my previous job and enrolled in the intensive 4 month coding bootcamp at "Developer Institute," with the goal of becoming a professional programmer. 
+                            I am immensely proud of this step and fully focused on applying my new technical expertise.
+                        </p>
+                        <p class="light teal-text text-darken-2" style="font-weight: 600;"
+                            data-en="<u>My Unconventional Background</u> &nbsp;— including 5 years as a Crane Operator, my experience as an IDF Tank Commander, and Youth Coordinator—has forged a powerful and unique set of complementary skills that I bring to software development:"
+                            data-he="<u>הרקע הלא שגרתי שלי</u> &nbsp;— הכולל 5 שנים כמפעיל עגורן נייד, הניסיון שלי כמפקד טנק בצה&quot;ל, ורכז נוער—יצר סט עוצמתי וייחודי של כישורים משלימים שאני מביא לפיתוח תוכנה:">
+                            <u>My Unconventional Background</u>  — including 5 years as a Crane Operator, my experience as an IDF Tank Commander, and Youth Coordinator—has forged a powerful and unique set of complementary skills that I bring to software development:
+                        </p>
+                        <ul class="browser-default" style="margin-left: 20px;">
+                            <li class="grey-text text-darken-3" 
+                                data-en='<span class="teal-text text-darken-1">Precision and Detail:</span> A deep, operational understanding of the need for absolute accuracy and zero-tolerance for errors in high-stakes operations and critical code.'
+                                data-he='<span class="teal-text text-darken-1">דיוק ופרטים:</span> הבנה מבצעית עמוקה של הצורך בדיוק מוחלט ואפס סובלנות לטעויות בפעולות בסיכון גבוה ובקוד קריטי.'>
+                                <span class="teal-text text-darken-1">Precision and Detail:</span> A deep, operational understanding of the need for absolute accuracy and zero-tolerance for errors in high-stakes operations and critical code.
+                            </li>
+                            <li class="grey-text text-darken-3"
+                                data-en='<span class="teal-text text-darken-1">Strategic Planning:</span> The ability to look ahead, anticipate technical challenges, and map out a robust, reliable path forward for development projects.'
+                                data-he='<span class="teal-text text-darken-1">תכנון אסטרטגי:</span> היכולת לצפות פני עתיד, לחזות אתגרים טכניים, ולשרטט נתיב חזק ואמין קדימה עבור פרויקטים של פיתוח.'>
+                                <span class="teal-text text-darken-1">Strategic Planning:</span> The ability to look ahead, anticipate technical challenges, and map out a robust, reliable path forward for development projects.
+                            </li>
+                            <li class="grey-text text-darken-3"
+                                data-en='<span class="teal-text text-darken-1">Leadership and Coordination:</span> Proven capacity to lead diverse teams, manage logistics, and ensure complex projects meet deadlines safely and successfully.'
+                                data-he='<span class="teal-text text-darken-1">מנהיגות ותיאום:</span> יכולת מוכחת להוביל צוותים מגוונים, לנהל לוגיסטיקה, ולהבטיח שפרויקטים מורכבים עומדים בלוחות זמנים בבטחה ובהצלחה.'>
+                                <span class="teal-text text-darken-1">Leadership and Coordination:</span> Proven capacity to lead diverse teams, manage logistics, and ensure complex projects meet deadlines safely and successfully.
+                            </li>
+                        </ul>
+                        
+                        <h6 style="margin-top: 20px; font-weight: 500;" data-en="Tech Stack:" data-he="מחסנית טכנולוגית:">Tech Stack:</h6>
+                        <div class="chips-container">
+                            <div class="chip teal lighten-5 teal-text text-darken-2">TypeScript & JavaScript</div>
+                            <div class="chip teal lighten-5 teal-text text-darken-2">React & Redux</div>
+                            <div class="chip teal lighten-5 teal-text text-darken-2">Node.js & Express.js</div>
+                            <div class="chip teal lighten-5 teal-text text-darken-2">Python & OOP</div>
+                            <div class="chip teal lighten-5 teal-text text-darken-2">MongoDB & SQL</div>
+                            <div class="chip teal lighten-5 teal-text text-darken-2">REST APIs & Axios</div>
+                            <div class="chip teal lighten-5 teal-text text-darken-2">Git/GitHub</div>
+                            <div class="chip teal lighten-5 teal-text text-darken-2">Postman</div>
+                            <div class="chip teal lighten-5 teal-text text-darken-2">Bootstrap & Materialize</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" class="section scrollspy grey lighten-4">
+            <div class="container">
+                <h2 class="center-align" style="font-weight: 700; margin-bottom: 50px;" data-en="Featured Projects" data-he="פרויקטים נבחרים">Featured Projects</h2>
+
+                <div class="row project-card z-depth-1 white" style="margin-bottom: 40px;">
+                    <div class="col s12 m6">
+                        <img src="https://res.cloudinary.com/dnfebz6gp/image/upload/v1764878596/Untitled_qnlivm.png" alt="Crane Operator App Interface" class="responsive-img" style="border:#424242 solid; border-radius: 4px; margin-top: 5px;">
+                    </div>
+                    <div class="col s12 m6" style="padding: 20px;">
+                        <h3 class="teal-text text-darken-2" style="font-weight: 600;" data-en="Crane Operators App" data-he="אפליקציית מפעילי עגורן">Crane Operators App</h3>
+                        <p class="grey-text text-darken-1"
+                            data-en="An ultimate solution with many features that every crane operator needs. An organized, user friendly, interactive and social App."
+                            data-he="פתרון אולטימטיבי עם אפשרויות רבות שכל מפעיל עגורן צריך. אפליקציה מאורגנת, ידידותית למשתמש, אינטראקטיבית וחברתית.">
+                            An ultimate solution with many features that every crane operator needs. An organized, user friendly, interactive and social App.
+                        </p>
+                        <ul class="browser-default" style="margin-left: 20px; font-size: 0.9rem;">
+                            <li data-en="Created a server with 3 tables and many End Points using Get/Post/Delete and more." data-he="יצירת שרת עם 3 טבלאות ונקודות קצה רבות באמצעות Get/Post/Delete ועוד.">Created a server with 3 tables and many End Points using Get/Post/Delete and more.</li>
+                            <li data-en="Implemented JWT and Cookies for User Logins and Functionalities." data-he="הטמעת JWT ו-Cookies עבור כניסות משתמשים ופונקציונליות.">Implemented JWT and Cookies for User Logins and Functionalities.</li>
+                            <li data-en="Used Redux for state management of Users and Posts." data-he="שימוש ב-Redux לניהול מצב (State) של משתמשים ופוסטים.">Used Redux for state management of Users and Posts.</li>
+                        </ul>
+                        <p class="grey-text text-lighten-1" style="margin-top: 15px;"
+                            data-en="Tech Stack: Node.js, React, Redux, TypeScript"
+                            data-he=" טכנולוגיות: Node.js, React, Redux, TypeScript">
+                            Tech Stack: Node.js, React, Redux, TypeScript
+                        </p>
+                        <div class="mt-4" style="margin-top: 20px;">
+                            <a href="https://amit-jackson-crane-app.netlify.app/" target="_blank" class="btn waves-effect waves-light teal-background" style="margin-right: 10px;"
+                                data-en="View Demo" data-he="צפה בהדגמה">
+                                <i class="material-icons left">visibility</i> View Demo
+                            </a>
+                            <a href="https://gamma.app/docs/Final-project-Demo-Daypptx-dnz8rk3mxzjz0az" target="_blank" class="btn waves-effect waves-light cyan darken-3" style="margin-right: 10px;"
+                                data-en="Presentation" data-he="מצגת">
+                                Presentation
+                            </a>
+                            <a href="https://github.com/TeaTimeJack/Crane-User-App" target="_blank" class="btn waves-effect waves-light grey darken-2"
+                                data-en="GitHub" data-he="גיט">
+                                GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row project-card z-depth-1 white" style="margin-bottom: 40px;">
+                    <div class="col s12 m6">
+                        <img src="https://res.cloudinary.com/dnfebz6gp/image/upload/v1764878722/pokemon-battle_leseqz.png" alt="Pokemon Game Screenshot" class="responsive-img" style="border:#424242 solid; border-radius: 4px; margin-top: 5px;">
+                    </div>
+                    <div class="col s12 m6" style="padding: 20px;">
+                        <h3 class="teal-text text-darken-2" style="font-weight: 600;" data-en="Random Pokemon Battle" data-he="קרב פוקימון אקראי">Random Pokemon Battle</h3>
+                        <p class="grey-text text-darken-1"
+                            data-en="An interactive game built with TypeScript. Users can throw up to 3 Pokeballs to catch a Pokémon and battle against a random CPU opponent."
+                            data-he="משחק אינטראקטיבי שנבנה באמצעות TypeScript. משתמשים יכולים לזרוק עד 3 פוקדורים כדי לתפוס פוקימון ולהילחם נגד יריב מחשב אקראי.">
+                            An interactive game built with TypeScript. Users can throw up to 3 Pokeballs to catch a Pokémon and battle against a random CPU opponent.
+                        </p>
+                        <ul class="browser-default" style="margin-left: 20px; font-size: 0.9rem;">
+                            <li data-en="Fetched and manipulated API data." data-he="שימוש ועיבוד נתונים מ-API.">Fetched and manipulated API data.</li>
+                            <li data-en="Dynamically update and render UI elements." data-he="עדכון וטעינה מחדש של רכיבי המשחק.">Dynamically update and render UI elements.</li>
+                            <li data-en="Responsive design with vanilla CSS" data-he="עיצוב רספונסיבי עם CSS בסיסי.">Responsive design with vanilla CSS</li>
+                        </ul>
+                        <p class="grey-text text-lighten-1" style="margin-top: 15px;"
+                            data-en="Tech Stack: TypeScript, JavaScript, API Integration, CSS"
+                            data-he=" טכנולוגיות: TypeScript, JavaScript,  API, CSS">
+                            Tech Stack: TypeScript, JavaScript, API Integration, CSS
+                        </p>
+                        <div class="mt-4" style="margin-top: 20px;">
+                            <a href="https://random-pokemon-battle.netlify.app/" target="_blank" class="btn waves-effect waves-light teal-background" style="margin-right: 10px;"
+                                data-en="View Demo" data-he="צפה בהדגמה">
+                                <i class="material-icons left">gamepad</i> View Demo
+                            </a>
+                            <a href="https://github.com/TeaTimeJack/Random_pokemon_battle" target="_blank" class="btn waves-effect waves-light grey darken-2"
+                                data-en="GitHub" data-he="גיט">
+                                GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row project-card z-depth-1 white" style="margin-bottom: 40px;">
+                    <div class="col s12 m6">
+                        <img src="https://res.cloudinary.com/dnfebz6gp/image/upload/v1765103109/lol-screen_cooibc.png" alt="Lol-screenShot" class="responsive-img" style="border:#424242 solid; border-radius: 4px; margin-top: 5px;">
+                    </div>
+                    <div class="col s12 m6" style="padding: 20px;">
+                        <h3 class="teal-text text-darken-2" style="font-weight: 600;" data-en="League of Legends Champions Filter" data-he="League of Legends Champions Filter">League of Legends Champions Filter</h3>
+                        <p class="grey-text text-darken-1"
+                            data-en="A FullStack App that shows and filters League of Legends Champions by role and names."
+                            data-he="אפליקציית FullStack שמציגה ומסננת דמויות League of Legends לפי תפקיד ושמות.">
+                            A FullStack App that shows and filters League of Legends Champions by role and names.
+                        </p>
+                        <ul class="browser-default" style="margin-left: 20px; font-size: 0.9rem;">
+                            <li data-en="Created a server with tables and many EndPoints for user Registration." data-he="יצירת שרת עם טבלאות ונקודות קצה רבות עבור הרשמת משתמשים.">Created a server with tables and many EndPoints for user Registration.</li>
+                            <li data-en="Used React's core methods for scalable and fast rendering usage." data-he="שימוש בשיטות הליבה של React .">Used React's core methods for scalable and fast rendering usage.</li>
+                            <li data-en="Implemented React's libraries like &quot;Routes&quot; and &quot;Context&quot; for handling Data and interactions." data-he="הטמעת ספריות של React כמו &quot;Routes&quot; ו-&quot;Context&quot; לטיפול בנתונים ואינטראקציות.">Implemented React's libraries like "Routes" and "Context" for handling Data and interactions.</li>
+                        </ul>
+                        <p class="grey-text text-lighten-1" style="margin-top: 15px;"
+                            data-en="Tech Stack: Node.js, React, JavaScript"
+                            data-he=" טכנולוגיות: Node.js, React, JavaScript">
+                            Tech Stack: Node.js, React, JavaScript
+                        </p>
+                        <div class="mt-4" style="margin-top: 20px;">
+                            <a href="https://crane-app.netlify.app/" target="_blank" class="btn waves-effect waves-light teal-background" style="margin-right: 10px;"
+                                data-en="View Demo" data-he="צפה בהדגמה">
+                                <i class="material-icons left">visibility</i> View Demo
+                            </a>
+                            <a href="https://github.com/TeaTimeJack/hackathon-LOL-Elvis-Amit" target="_blank" class="btn waves-effect waves-light grey darken-2"
+                                data-en="GitHub" data-he="גיט">
+                                GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row project-card z-depth-1 white">
+                    <div class="col s12 m6">
+                        <img src="https://res.cloudinary.com/dnfebz6gp/image/upload/v1765101622/jack-buns-screen_m6rqz1.png" alt="Jack Buns Screenshot" class="responsive-img" style="border:#424242 solid; border-radius: 4px; margin-top: 5px;">
+                    </div>
+                    <div class="col s12 m6" style="padding: 20px;">
+                        <h3 class="teal-text text-darken-2" style="font-weight: 600;" data-en="Jack Buns WebSite" data-he="אתר ג'ק באנס">Jack Buns WebSite</h3>
+                        <p class="grey-text text-darken-1"
+                            data-en="A responsive bakery website requested by the customer built with HTML &amp; CSS (Materialize). Users can navigate easily around and see the products, gallery, and their cart with user-friendly interactions"
+                            data-he="אתר מאפייה רספונסיבי שהתבקש על ידי הלקוח ונבנה באמצעות HTML &amp; CSS (Materialize). משתמשים יכולים לנווט בקלות ולצפות במוצרים, בגלריה ובעגלה שלהם עם אינטראקציות ידידותיות למשתמש.">
+                            A responsive bakery website requested by the customer built with HTML & CSS (Materialize). Users can navigate easily around and see the products, gallery, and their cart with user-friendly interactions
+                        </p>
+                        <ul class="browser-default" style="margin-left: 20px; font-size: 0.9rem;">
+                            <li data-en="Interactive and responsive Navbar with dropdown, sidenav, and navigation." data-he="סרגל ניווט אינטראקטיבי ורספונסיבי עם תפריט נפתח, תפריט צד וניווט.">Interactive and responsive Navbar with dropdown, sidenav, and navigation.</li>
+                            <li data-en="Deep usage of HTML elements and their properties." data-he="שימוש מעמיק באלמנטים של HTML והמאפיינים שלהם.">Deep usage of HTML elements and their properties.</li>
+                        </ul>
+                        <p class="grey-text text-lighten-1" style="margin-top: 15px;"
+                            data-en="Tech Stack: HTML,CSS, Materialize, JavaScript, Jquery"
+                            data-he="מחסנית טכנולוגית: HTML,CSS, Materialize, JavaScript, Jquery">
+                            Tech Stack: HTML,CSS, Materialize, JavaScript, Jquery
+                        </p>
+                        <div class="mt-4" style="margin-top: 20px;">
+                            <a href="https://amit-jackson-jackbuns.netlify.app/" target="_blank" class="btn waves-effect waves-light teal-background" style="margin-right: 10px;"
+                                data-en="View Demo" data-he="צפה בהדגמה">
+                                <i class="material-icons left">gamepad</i> View Demo
+                            </a>
+                            <a href="https://github.com/TeaTimeJack/Crash-Course-Project" target="_blank" class="btn waves-effect waves-light grey darken-2"
+                                data-en="GitHub" data-he="גיט">
+                                GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </section>
+
+        <section id="contact" class="section scrollspy white center-align">
+            <div class="container">
+                <h2 style="font-weight: 700; margin-bottom: 20px;" data-en="Let's Connect" data-he="בואו נתחבר!">Let's Connect</h2>
+                <p class="flow-text light grey-text text-darken-1" style="margin-bottom: 40px;"
+                    data-en="I am currently open to exciting new opportunities. Feel free to reach out to discuss collaboration or just say hi!"
+                    data-he="אני פתוח כרגע להזדמנויות חדשות ומרתקות. אל תהססו ליצור קשר כדי לדון בשיתוף פעולה או סתם להגיד שלום!">
+                    I am currently open to exciting new opportunities. Feel free to reach out to discuss collaboration or just say hi!
+                </p>
+
+                <div class="row">
+                    <div class="col s12 m3" style="margin-bottom: 15px;">
+                        <a href="https://docs.google.com/document/d/1WiCdoKMrXVtSCaXMAJrWfK1hsETa05fog90rb1Gp_uA/edit?usp=sharing" target="_blank" class="btn-large waves-effect waves-light cyan darken-3 z-depth-1" style="width: 100%;"
+                            data-en="Resume" data-he="קורות חיים">
+                            <i class="material-icons left">link</i> Resume
+                        </a>
+                    </div>
+                    <div class="col s12 m3" style="margin-bottom: 15px;">
+                        <a href="mailto:amitjack14@gmail.com?subject=Inquiry%20from%20Your%20Portfolio" class="btn-large waves-effect waves-light teal-background z-depth-1" style="width: 100%;"
+                            data-en="Email Me" data-he="שלח לי מייל">
+                            <i class="material-icons left">email</i> Email Me
+                        </a>
+                    </div>
+                    <div class="col s12 m3" style="margin-bottom: 15px;">
+                        <a href="http://www.linkedin.com/in/amit-jackson" target="_blank" class="btn-large waves-effect waves-light grey darken-2 z-depth-1" style="width: 100%;"
+                            data-en="LinkedIn" data-he="לינקדאין">
+                            <i class="material-icons left">public</i> LinkedIn
+                        </a>
+                    </div>
+                    <div class="col s12 m3" style="margin-bottom: 15px;">
+                        <a href="https://github.com/TeaTimeJack" target="_blank" class="btn-large waves-effect waves-light black z-depth-1" style="width: 100%;"
+                            data-en="GitHub" data-he="גיט">
+                            <i class="material-icons left">code</i> GitHub
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="page-footer grey darken-3">
+        <div class="container">
+            <div class="row">
+                <div class="col s12">
+                    <p class="grey-text text-lighten-4 center-align"
+                        data-en="&copy; <span id='year'></span> Amit Jackson. Designed with Materialize CSS."
+                        data-he="&copy; <span id='year'></span> עמית ג'קסון. עוצב באמצעות Materialize CSS.">
+                        &copy; <span id="year"></span> Amit Jackson. Designed with Materialize CSS.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script>
+        function setLanguage(lang) {
+            const body = document.body;
+            const langToggle = document.getElementById('language-toggle');
+            
+            // 1. Set global direction attribute
+            body.setAttribute('data-lang', lang);
+            
+            // 2. Set the page title
+            const titleEl = document.querySelector('title');
+            if (titleEl) {
+                titleEl.textContent = titleEl.getAttribute(`data-${lang}`);
+            }
+
+            // 3. Update all translatable elements
+            document.querySelectorAll('[data-en]').forEach(el => {
+                const translation = el.getAttribute(`data-${lang}`);
+                
+                // Special handling for buttons with icons to preserve structure and update icon class
+                if (el.tagName === 'A' && (el.classList.contains('btn') || el.classList.contains('btn-large'))) {
+                    const icon = el.querySelector('i');
+                    if (icon) {
+                        // Update icon class to handle LTR/RTL positioning
+                        icon.classList.remove('left', 'right');
+                        const iconClass = (lang === 'en') ? 'left' : 'right';
+                        icon.classList.add(iconClass);
+                        
+                        // Set innerHTML: Icon then Text for EN, Text then Icon for HE
+                        if (lang === 'en') {
+                            el.innerHTML = icon.outerHTML + ' ' + translation;
+                        } else {
+                            el.innerHTML = translation + ' ' + icon.outerHTML;
+                        }
+                    } else {
+                        // Button without icon
+                        el.textContent = translation;
+                    }
+                } 
+                // Special handling for elements with inner HTML (like <u> or <span>)
+                else if (translation && (translation.includes('<') || translation.includes('>'))) {
+                    el.innerHTML = translation;
+                } else {
+                    el.textContent = translation;
+                }
+            });
+
+            // 4. Update the language switch visual text color
+            const switchSpanEn = document.querySelector('.lang-label-en');
+            const switchSpanHe = document.querySelector('.lang-label-he');
+
+            if (lang === 'en') {
+                switchSpanEn.classList.remove('grey-text', 'text-darken-3');
+                switchSpanEn.classList.add('teal-text', 'text-darken-2');
+                switchSpanHe.classList.remove('teal-text', 'text-darken-2');
+                switchSpanHe.classList.add('grey-text', 'text-darken-3');
+            } else {
+                switchSpanHe.classList.remove('grey-text', 'text-darken-3');
+                switchSpanHe.classList.add('teal-text', 'text-darken-2');
+                switchSpanEn.classList.remove('teal-text', 'text-darken-2');
+                switchSpanEn.classList.add('grey-text', 'text-darken-3');
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', function() {
+            // Initialize Materialize components
+            var elemsSidenav = document.querySelectorAll('.sidenav');
+            M.Sidenav.init(elemsSidenav);
+            
+            var elemsScrollspy = document.querySelectorAll('.scrollspy');
+            M.ScrollSpy.init(elemsScrollspy);
+            
+            // Update the current year in the footer
+            document.getElementById('year').textContent = new Date().getFullYear();
+
+            // Language toggle setup
+            const langToggle = document.getElementById('language-toggle');
+            // Check if there is a saved language preference, default to 'en'
+            const savedLang = localStorage.getItem('portfolioLang') || 'en';
+
+            // Set initial state based on saved preference
+            if (savedLang === 'he') {
+                langToggle.checked = true;
+                setLanguage('he');
+            } else {
+                langToggle.checked = false;
+                setLanguage('en');
+            }
+            
+            // Add event listener for toggling the language
+            langToggle.addEventListener('change', function() {
+                const newLang = this.checked ? 'he' : 'en';
+                setLanguage(newLang);
+                localStorage.setItem('portfolioLang', newLang);
+            });
         });
     </script>
 </body>
